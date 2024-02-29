@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <title>QR Code Payment</title>
+</head>
+<body>
+  <main>
+    <header>
+      <div id="qr-code">
+        <img src="{{ url_for('static', filename='img/qrcode.png')}}" alt="QR Code" />
+      </div>
+      <aside>
+        <h1>Pedido realizado</h1>
+        <p>
+          Para pagar, selecione a opção <strong>Pix com QR Code</strong> no
+          seu aplicativo de pagamentos e escaneie o código ao lado.
+        </p>
+        <div id="purchase-value">
+          <img src="" alt="Ícone de tag" />
+          <span>Compra de R$ <strong id="amount">287,90</strong></span>
+        </div>
+      </aside>
+    </header>
+
+    <footer>
+      <div id="expiration-time">
+        <header>
+          <small>Este QR Code expira em</small>
+          <div>
+            <img src="" />
+            <span>30 minutos</span>
+          </div>
+        </header>
+
+        <span>Avisaremos quando o pagamento for confirmado</span>
+      </div>
+
+      <div id="order">
+        <small>O número do seu pedido é</small>
+        <div>
+          <img src="" />
+          <span>12345465</span>
+        </div>
+      </div>
+    </footer>
+    
+  </main>
+</body>
+</html>
