@@ -12,7 +12,7 @@
   <main>
     <header>
       <div id="qr-code">
-        <img src="{{ url_for('static', filename='img/qrcode.png')}}" alt="QR Code" />
+        <img src="{{host}}/payments/pix/qr_code/{{qr_code}}" alt="QR Code" />
       </div>
       <aside>
         <h1>Pedido realizado</h1>
@@ -22,7 +22,7 @@
         </p>
         <div id="purchase-value">
           <img src="" alt="Ícone de tag" />
-          <span>Compra de R$ <strong id="amount">287,90</strong></span>
+          <span>Compra de R$ <strong id="amount">{{ value }}</strong></span>
         </div>
       </aside>
     </header>
@@ -44,7 +44,7 @@
         <small>O número do seu pedido é</small>
         <div>
           <img src="" />
-          <span>12345465</span>
+          <span>{{ payment_id }}</span>
         </div>
       </div>
     </footer>
